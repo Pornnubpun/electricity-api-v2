@@ -63,7 +63,7 @@ app.get('/api/usagehistory/:province', (req, res) => {
 });
 
 // 6. API: User history for a specific province
-app.get('/api/users/history/:province', (req, res) => {
+app.get('/api/usershistory/:province', (req, res) => {
     const { province } = req.params;
     const data = loadData('electricity_users_en.json');
     const result = data.filter(d => d.province_name.toLowerCase() === province.toLowerCase());
@@ -71,8 +71,10 @@ app.get('/api/users/history/:province', (req, res) => {
 });
 
 
+// ... [Keep all your existing code and routes from Step 5] ...
+// Change the bottom of index.js from app.listen(...) to this:
 if (process.env.NODE_ENV !== 'test') {
-    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+ app.listen(PORT, () => console.log(`Server running on port
+${PORT}`));
 }
-
-module.exports = app; 
+module.exports = app; // Export for testing
