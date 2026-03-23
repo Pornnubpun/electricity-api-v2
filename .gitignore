@@ -1,0 +1,14 @@
+# Dependencies - ห้ามเอาโฟลเดอร์ library ขึ้น GitHub เพราะขนาดใหญ่มาก
+node_modules/
+
+# Log files - ไฟล์บันทึกข้อผิดพลาดที่ไม่จำเป็น
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files - ไฟล์ขยะจากระบบปฏิบัติการ
+.DS_Store
+Thumbs.db
+
+# Environment variables - ไฟล์เก็บความลับ (ถ้ามี)
+.env
